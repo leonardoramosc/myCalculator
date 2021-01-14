@@ -10,7 +10,7 @@ import (
 
 type calc struct{}
 
-func (calc) operate(input string, op string) float64 {
+func (calc) Operate(input string, op string) float64 {
 
 	values := strings.Split(input, op)
 
@@ -43,7 +43,7 @@ func formatInput(str string) string {
 	return formatted
 }
 
-func getUserInput() string {
+func GetUserInput() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Println("Ingresa operacion:")
 
@@ -52,7 +52,7 @@ func getUserInput() string {
 	return formatInput(scanner.Text())
 }
 
-func getOperator(operation string) string {
+func GetOperator(operation string) string {
 	operators := []string{"+", "-", "*", "/"}
 	var op string
 
