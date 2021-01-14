@@ -8,9 +8,9 @@ import (
 	"strings"
 )
 
-type calc struct{}
+type Calc struct{}
 
-func (calc) Operate(input string, op string) float64 {
+func (Calc) Operate(input string, op string) float64 {
 
 	values := strings.Split(input, op)
 
@@ -45,7 +45,7 @@ func formatInput(str string) string {
 
 func GetUserInput() string {
 	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Println("Ingresa operacion:")
+	fmt.Println("Type operation:")
 
 	scanner.Scan()
 
